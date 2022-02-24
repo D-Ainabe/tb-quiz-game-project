@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script> 
+        var countDownTimer;
+        var timerInterval;
+        const maxTime= 5 * 60 * 1000;
+        function setCountDownTimer() {
+            countDownTimer = maxTime;
+        }
+
+        //When the person clicks the begin button the timer starts
+        //start time
+        timerInterval = setInterval(updateTimer, 1000);
+
+        function updateTimer () {
+            countDownTimer = countDownTimer -1;
+        }
+        //question is asked
+        function SetupQuestions () {
+            let question1 = {
+                id: "quest0",
+                question: "To select elements with a specific class:",
+                answer1: "write a semicolon (;)",
+            };
+
+            let question2 = {
+                id: "quest",
+                questions: "In CSS, a color can be specified by using a predefined:",
+                answer1: "yes",
+                answer2: "no",
+                answer3: null,
+                answer4: null,
+                correctAnswer: 1
+            };
+
+            arraryofQuestions.push(question1);
+            arraryofQuestions.push(question2);
+
+            console.log("SetupQuestions arrayofQuestions:", arraryofQuestions);
+        }
+
+        function nextQuestionLoop() {
+            for(let i = 0; i<arraryofQuestions.length; i++) {
+            }
+        }
+
+        function showQustion(questionindex) {
+            let questionSection = document.getElementId('question');
+            let newQuestion = document.createElement('div');
+            newQuestion.id = arrayofQuestions[questionindex].id;
+            newQuestion.innerText = arrayofQuestions[questionindex].question;
+        }
+    
+    
+        //if question is correct next question
+        
+        //if questin is incorrect time penalty
+        //if answer is correct show points and then go to the next question
+        //Once all questions have been answered give options
+        //Once all questions have been answered give options to save score
+        //If use chooses to save score show the scoreboard
+    </script>
+</head>
+
+
+<body>
+    <div class="welcome">
+        <span style="text-align:left">Time Remaining:</span>
+        <span style="text-align:right">Score:</span>
+    </div>
+
+    <div>
+        <div id="question">
+            <div id="answer1">A1: Ut enim ad minim</div>
+
+            <div id="answer2">A2: Duis aute irure dolar</div>
+
+            <div id="answer3">A3: Lorem, ipsum dol</div>
+        </div>
+    <div>
+
+
+    <div>
+        <p>Question: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+    </div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
